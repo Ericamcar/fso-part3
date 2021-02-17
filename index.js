@@ -68,4 +68,6 @@ app.delete('/api/persons/:id', (req, res) => {
     res.status(204).end();
 })
 
-app.listen(3000, () => console.log('SERVER IS LISTENING'));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log('SERVER IS LISTENING'));
