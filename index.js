@@ -19,10 +19,6 @@ persons = [
     { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
 ]
 
-app.get('/', (req, res) => {
-    res.send('<h1>Home</h1>');
-});
-
 app.get('/info', (req, res) => {
     res.send(`<p>Phonebook has info for ${persons.length} people<p><p>${new Date().toString()}</p>`);
 });
@@ -69,6 +65,6 @@ app.delete('/api/persons/:id', (req, res) => {
     res.status(204).end();
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log('SERVER IS LISTENING'));
